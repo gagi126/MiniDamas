@@ -67,6 +67,37 @@ ul.breadcrumb li b:hover {
 	margin-right:auto;
 }
 
+h3 {
+	text-decoration:underline;
+}
+
+hr {
+	position:absolute;
+	left:0px;
+	width:440px;
+}
+
+#moveBlancas {
+	position:absolute;
+	left:500px;
+	top: 120px;
+	width:200px;
+}
+
+#moveRojas {
+	position:absolute;
+	left:700px;
+	top: 120px;
+	width:200px;
+}
+
+
+#tabla
+{
+	
+	margin: auto;
+}
+
 #casilleroblanco
 {
     background-color: white;
@@ -74,4 +105,9 @@ ul.breadcrumb li b:hover {
 #casilleronegro
 {
 	background-color: black;
+}
+
+td {
+	height:75px;
+	width:90px;
 }
