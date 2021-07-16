@@ -67,7 +67,7 @@ function isTheGameOver(){
 function endGame(){
 	gGameInProgress = false; 
 	if (sonTablas){
-		alert("Juego Terminado...    Juego en tablas"); 
+		alert("Juego Terminado..."); 
 	}
 	else if (turnoBlancas){
 		alert("Juego Terminado... Ganan Rojas"); 
