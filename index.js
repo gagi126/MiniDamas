@@ -272,7 +272,7 @@ function empiezanBlancas(){
 	document.getElementById("moveRojas").innerHTML = ""; 
 	document.getElementById("moveBlancas").innerHTML = ""; 
 	
-	document.getElementById("esTurno").innerHTML = "Empiezan Blancas:"; 
+	document.getElementById("esTurno").innerHTML = "Empiezan Blancas"; 
 }
 
 
