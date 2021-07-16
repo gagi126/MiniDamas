@@ -590,13 +590,7 @@ function clickOnPiece(indicePieza){
 	}
 }
 
-function peticionTablas(){
-	var respuesta = confirm("El otro jugador ha pedido Tablas. Puedes aceptar para terminar la partida o cancelar para continuar.");
-	if (respuesta){
-		acuerdoTablas = true; 
-		comprobarTablas(); 
-	}
-}
+
 
 function iniciarJuego(canvasElement, moveCountElement) {
     gCanvasElement = canvasElement;
