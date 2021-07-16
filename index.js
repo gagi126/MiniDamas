@@ -460,7 +460,7 @@ function clickOnEmptyCell(cell) {
 			borrarPieza();
 		}
 		
-		// De momento, esto es así hasta que se puedan hacer saltos en cadena. 
+		
 		gSelectedPieceIndex = -1;
 		gSelectedPieceHasMoved = false;
 
