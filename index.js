@@ -265,62 +265,7 @@ function drawQueen(p, color, selected) {
     gDrawingContext.stroke();
 }
 
-function guardarPosiciones() {
 
-	// Primero tenemos que vaciar para poder guardar
-	for (var i=0; i < gNumPieces; i++) { 
-		localStorage.removeItem("pieza" + i + ".fila"); 
-		localStorage.removeItem("pieza" + i + ".columna"); 
-		localStorage.removeItem("pieza" + i + ".color"); 
-	}
-	
-	localStorage.setItem("numMove", gMoveCount);
-	
-	// Cogemos la cantidad de piezas actual, que es la que vamos a guardar en memoria tras vaciar lo anterior. 
-	// Actualizamos el valor en memoria.
-	gNumPieces = piezas.length;
-	localStorage.setItem("numPiezas", gNumPieces);
-	if (turnoBlancas){	
-		localStorage.setItem("esTurno", "blancas");
-	}
-	else {
-		localStorage.setItem("esTurno", "Rojas");
-	}	
-	for (var i=0; i < piezas.length; i++) { 
-		localStorage.setItem("pieza" + i + ".fila", piezas[i].row); 
-		localStorage.setItem("pieza" + i + ".columna", piezas[i].column); 
-		localStorage.setItem("pieza" + i + ".color", piezas[i].color); 
-	}
-}
-
-function cargarPosiciones() {
-	piezas = [];
-	
-	gNumPieces = parseInt(localStorage.getItem("numPiezas"));
-	gMoveCount = parseInt(localStorage.getItem("numMove"));
-	
-	for (var i=0; i < gNumPieces; i++) { 
-		var row = parseInt(localStorage.getItem("pieza" + i + ".fila")); 
-		var column = parseInt(localStorage.getItem("pieza" + i + ".columna")); 
-		var color = localStorage.getItem("pieza" + i + ".color"); 
-		if ((!(color==="null"))&&(piezas.length<24)){ // No puede haber más de 24 piezas válidas. 
-			piezas.push(new Casilla(row, column, color));
-		}
-	}
-
-	if (parseInt(localStorage.getItem("esTurno"))=="blancas"){
-		turnoBlancas = true; 
-		turnoRojas = false; 
-	}	
-	else {
-		turnoBlancas = false; 
-		turnoRojas = true; 
-	}
-	
-	limpiarMovimientos(); 
-	
-	drawBoard();
-}
 
 function empiezanBlancas(){
 
