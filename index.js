@@ -451,11 +451,11 @@ function mostrarMovimiento(casilla1, casilla2, salto) {
 	var movimiento = document.createElement("p");
 	if (turnoBlancas){
 		document.getElementById("moveBlancas").appendChild(movimiento);
-		document.getElementById("esTurno").innerHTML = "Rojas mueven:"; 
+		document.getElementById("esTurno").innerHTML = "Rojas mueven"; 
 	}
 	else {
 		document.getElementById("moveRojas").appendChild(movimiento);
-		document.getElementById("esTurno").innerHTML = "Blancas mueven:"; 
+		document.getElementById("esTurno").innerHTML = "Blancas mueven"; 
 	}
 }
 
