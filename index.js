@@ -189,19 +189,19 @@ function drawBoard() {
 
     gDrawingContext.beginPath();
    
-    /* vertical lines */
+    /* lineas verticales */
     for (var x = 0; x <= kPixelWidth; x += kPieceWidth) {
 		gDrawingContext.moveTo(0.5 + x, 0);
 		gDrawingContext.lineTo(0.5 + x, kPixelHeight);
     }
     
-    /* horizontal lines */
+    /* lineas horizontales */
     for (var y = 0; y <= kPixelHeight; y += kPieceHeight) {
 		gDrawingContext.moveTo(0, 0.5 + y);
 		gDrawingContext.lineTo(kPixelWidth, 0.5 +  y);
     }
     
-    /* draw it! */
+    /* dibujado */
     gDrawingContext.strokeStyle = "#ccc";
     gDrawingContext.stroke();
     
