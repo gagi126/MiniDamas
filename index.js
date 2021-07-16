@@ -70,13 +70,13 @@ function isTheGameOver(){
 function endGame(){
 	gGameInProgress = false; 
 	if (sonTablas){
-		alert("Juego Terminado. Juego en tablas"); 
+		alert("Juego Terminado...    Juego en tablas"); 
 	}
 	else if (turnoBlancas){
-		alert("Juego Terminado. Ganan Rojas"); 
+		alert("Juego Terminado... Ganan Rojas"); 
 	}
 	else {
-		alert("Juego Terminado. Ganan Blancas"); 
+		alert("Juego Terminado... Ganan Blancas"); 
 	}
 	newGame();
 }
