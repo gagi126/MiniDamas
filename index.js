@@ -34,7 +34,6 @@ var gMoveCountElem;
 var gGameInProgress;
 
 function getCursorPosition(e) {
-	/* returns Cell with .row and .column properties */
 	var x;
 	var y;
 	if (e.pageX != undefined && e.pageY != undefined) {
@@ -53,9 +52,7 @@ function getCursorPosition(e) {
     return cell;
 }
 
-/*function gGameInProgress(){
-	return true;
-}*/
+
 
 function isTheGameOver(){
 	legalMoves = getLegalMoves(); 
@@ -485,8 +482,6 @@ function clickOnEmptyCell(cell) {
     var rowDiff = direccion * (cell.row - piezas[gSelectedPieceIndex].row);
     var columnDiff = direccion * (cell.column - piezas[gSelectedPieceIndex].column);
     if ((rowDiff == 1 && Math.abs(columnDiff) == 1) && (!(legalMoves[0] instanceof Jump))){
-		/* we already know that this click was on an empty square,
-		so that must mean this was a valid single-square move */
 		
 		// Mostramos el movimiento hecho
 		mostrarMovimiento(piezas[gSelectedPieceIndex], cell, false);
@@ -510,7 +505,6 @@ function clickOnEmptyCell(cell) {
 	}
     else if ((Math.abs(rowDiff)== 2 && Math.abs(columnDiff)== 2) &&
 	isThereAPieceBetween(piezas[gSelectedPieceIndex], cell) && (legalMoves[0] instanceof Jump)) {
-		/* this was a valid jump */
 		if (!gSelectedPieceHasMoved) {
 			gMoveCount += 1;
 		}
@@ -597,13 +591,11 @@ function clickOnPiece(indicePieza){
 }
 
 function peticionTablas(){
-	//cambioTurno(); 
 	var respuesta = confirm("El otro jugador ha pedido Tablas. Puedes aceptar para terminar la partida o cancelar para continuar.");
 	if (respuesta){
 		acuerdoTablas = true; 
 		comprobarTablas(); 
 	}
-	//cambioTurno(); 
 }
 
 function iniciarJuego(canvasElement, moveCountElement) {
