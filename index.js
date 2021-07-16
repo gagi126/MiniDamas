@@ -459,16 +459,7 @@ function mostrarMovimiento(casilla1, casilla2, salto) {
 	}
 }
 
-function limpiarMovimientos(){
-	document.getElementById("moveRojas").innerHTML = "<h3>Rojas</h3>"; 
-	document.getElementById("moveBlancas").innerHTML = "<h3>Blancas</h3>"; 
-	if (turnoBlancas){
-		document.getElementById("esTurno").innerHTML = "Blancas mueven:"; 
-	}
-	else {
-		document.getElementById("esTurno").innerHTML = "Rojas mueven:"; 
-	}
-}
+
 
 function clickOnEmptyCell(cell) {
     if (gSelectedPieceIndex == -1){ 
@@ -501,7 +492,7 @@ function clickOnEmptyCell(cell) {
 		return;
     }
 	else if ((rowDiff == 1 && Math.abs(columnDiff) == 1) && (legalMoves[0] instanceof Jump)){
-		alert("Hay saltos disponibles");
+		alert("Hay saltos faciles disponibles, revise la jugada.");
 	}
     else if ((Math.abs(rowDiff)== 2 && Math.abs(columnDiff)== 2) &&
 	isThereAPieceBetween(piezas[gSelectedPieceIndex], cell) && (legalMoves[0] instanceof Jump)) {
@@ -589,8 +580,6 @@ function clickOnPiece(indicePieza){
 		alert("No es tu turno"); 
 	}
 }
-
-
 
 function iniciarJuego(canvasElement, moveCountElement) {
     gCanvasElement = canvasElement;
